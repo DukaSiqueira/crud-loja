@@ -39,7 +39,6 @@ class ProdutoController extends Controller
         try {
             return $this->produtoRepository->store($request);
         } catch (\Throwable $exception) {
-            dd($exception->getMessage());
             return response($exception->getMessage(), 500);
         }
     }
